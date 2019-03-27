@@ -1,0 +1,14 @@
+book:
+  path: '/bookindex'
+  defaults:
+    _controller: '\Drupal\bookLiberary\Controller\BookLiberaryController::index'
+  requirements:
+    _permission: 'access content'
+
+book.form:
+  path: '/bookform'
+  defaults:
+    _title: 'Book Data'
+    _form: '\Drupal\bookLiberary\Form\BookLiberaryForm'
+  requirements:
+    _permission: 'Acess content'

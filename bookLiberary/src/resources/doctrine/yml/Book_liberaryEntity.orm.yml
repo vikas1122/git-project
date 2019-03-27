@@ -1,0 +1,27 @@
+Drupal\book_Liberary\Entity\Book_liberaryEntity:
+  type: entity
+  table: book_liberary
+  repositoryClass: Drupal\book_Liberary\Repository\BookLiberaryRepository
+  tagsId:
+    tagsId:
+      type: integer
+      generator:
+        strategy: AUTO
+  fields:
+    title:
+      type: string
+      column: title
+    description:
+      type: string
+      column: description
+    authors:
+      type: string
+      column: authors
+    price:
+      type: integer
+      column: price
+ oneToMany:
+    books:
+      targetEntity: Drupal\book_Liberary\Entity\Book_liberaryEntity
+      mappedBy: book_liberary
+      cascade: ["persist"]

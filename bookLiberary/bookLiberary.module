@@ -1,0 +1,20 @@
+<?php
+
+/**
+ *
+ *hook_implementation()
+ *
+ */
+ function bookLiberary_theme() {
+ $theme['book_liberary'] = [
+    'variables' => [
+        'title' => '',
+        'description' => '',
+        'authors' => '',
+        'price' => ''
+    ],
+    'template' => 'book_liberary'
+  ];
+
+  return $theme;
+}
